@@ -16,9 +16,7 @@ const ProductCard = async ({ product }: ProductCardProps) => {
             href={`/products/${product.id}`}
             className=" group card mx-auto w-[300px] lg:w-96 bg-base-100 dark:bg-neutral-700 shadow-md hover:shadow-xl transition-shadow"
         >
-            <figure><Image
-                width={800}
-                height={800}
+            <figure><img
                 src={product.imageUrl!}
                 alt={product.name!}
                 className="h-48 md:h-72 w-full object-cover group-hover:scale-110 transition duration-500"
