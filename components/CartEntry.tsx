@@ -26,11 +26,9 @@ const CartEntry = ({ cartItem: { product, quantity }, setProductQuantity }: Prop
     return (
         <div>
             <div className="flex flex-wrap items-center">
-                <Image
+                <img
                     src={product.imageUrl!}
                     alt={product.name!}
-                    width={200}
-                    height={200}
                     className="rounded-lg mr-[10px]"
                 />
                 <div>

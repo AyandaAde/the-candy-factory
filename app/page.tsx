@@ -30,14 +30,11 @@ export default async function Home({ searchParams: { page = "1" } }: Props) {
     <div className="flex flex-col items-center">
       {currentPage === 1 &&
         <div className="card lg:card-side bg-base-200 dark:bg-neutral-600 shadow-xl">
-          <figure><Image
-            width={400}
-            height={800}
+          <img
             src={products[0].imageUrl!}
             alt={products[0].name!}
             className="w-full max-w-sm rounded-lg shadow-2xl hover:scale-110 transition duration-500"
-            priority
-          /></figure>
+          />
           <div className="card-body">
             <h1 className="text-5xl font-bold card-title">{products[0].name}</h1>
             <p className="py-6">{products[0].description}</p>

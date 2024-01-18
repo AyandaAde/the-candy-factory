@@ -41,14 +41,11 @@ const ProductPage = async ({ params: { id } }: Props) => {
     return (
         <>
             <div className="card lg:card-side bg-base-200 dark:bg-black shadow">
-                <Image
-                    width={500}
-                    height={500}
+                <figure><img
                     src={products[0].imageUrl!}
                     alt={products[0].name!}
                     className="rounded-lg hover:scale-110 transition duration-500"
-                    priority
-                />
+                /></figure>
                 <div className="card-body">
                     <h1 className="text-5xl font-bold">{products[0].name}</h1>
                     <PriceTag price={products[0].price!} className="mt-4" />
