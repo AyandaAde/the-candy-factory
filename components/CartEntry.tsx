@@ -29,7 +29,7 @@ const CartEntry = ({ cartItem: { product, quantity }, setProductQuantity }: Prop
                 <img
                     src={product.imageUrl!}
                     alt={product.name!}
-                    className="rounded-lg mr-[10px]"
+                    className="rounded-lg mr-[10px] w-[200px] h-[200px]"
                 />
                 <div>
                     <Link href={`/product/${product.id}`} className="font-bold">{product.name}</Link>
