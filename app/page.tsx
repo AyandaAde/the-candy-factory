@@ -21,7 +21,7 @@ export default async function Home({ searchParams: { page = "1" } }: Props) {
   const totalItemCount = await db.select().from(product);
 
 
-  const totalPages = Math.ceil((totalItemCount.length - heroItemCount)) / pageSize;
+  const totalPages = Math.ceil((totalItemCount.length - heroItemCount) / pageSize);
 
   const products = await db.select().from(product).orderBy(desc(product.id)).limit(pageSize + (currentPage === 1 ? heroItemCount : 0)).offset((currentPage - 1) * pageSize + (currentPage === 1 ? 0 : heroItemCount));
   ;
